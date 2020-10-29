@@ -1,6 +1,6 @@
 #My personal portfolio .
 
-- Deployed at - 
+- Deployed at - https://my-portfolio-phi-seven.vercel.app/
 
 ### Table of Contents
 
@@ -27,8 +27,8 @@ You're sections headers will be used to reference location of destination.
 - `01.\DOWNLOAD THE ZIP REPOSITORY`
 - `02.\_UNZIP`
 - `03.\_CD INTO PROJECT`
-- `04.\_RIGHT CLICK ON INDEX.HTML`
-- `05.\_VISIT - http:// 'I’m an what ever browser i use..' `
+- `04.\_RIGHT CLICK ON INDEX.HTML AND OPEN`
+- `05.\_VISIT - https://my-portfolio-phi-seven.vercel.app/`
 
 ## References
 
