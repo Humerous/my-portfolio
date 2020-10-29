@@ -15,7 +15,10 @@ You're sections headers will be used to reference location of destination.
 
 ## Features
 
-- NEXT js
+- HTML
+- CSS
+- JS
+- BOOTSTRAP 4
 
 ## Requirements
 
