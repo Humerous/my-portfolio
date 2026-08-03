@@ -1,6 +1,6 @@
 #My personal portfolio .
 
-- Deployed at - https://www.videoimagetechnologies.co.za/
+- Deployed at - https://my-portfolio-three-black.vercel.app/
 
 ### Table of Contents
 
@@ -31,7 +31,7 @@ You're sections headers will be used to reference location of destination.
 - `02.\_UNZIP`
 - `03.\_CD INTO PROJECT`
 - `04.\_RIGHT CLICK ON INDEX.HTML AND OPEN`
-- `05.\_VISIT - https://www.videoimagetechnologies.co.za/
+- `05.\_VISIT - [https://www.videhttps://my-portfolio-three-black.vercel.app/)
 
 ## References
 
