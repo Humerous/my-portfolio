@@ -1,6 +1,6 @@
 #My personal portfolio .
 
-- Deployed at - https://my-portfolio-three-black.vercel.app/
+- Deployed at - https://www.videoimagetechnologies.co.za/
 
 ### Table of Contents
 
