@@ -31,7 +31,7 @@ You're sections headers will be used to reference location of destination.
 - `02.\_UNZIP`
 - `03.\_CD INTO PROJECT`
 - `04.\_RIGHT CLICK ON INDEX.HTML AND OPEN`
-- `05.\_VISIT - https://my-portfolio-phi-seven.vercel.app/`
+- `05.\_VISIT - https://www.videoimagetechnologies.co.za/
 
 ## References
 
