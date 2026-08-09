@@ -1,54 +1,60 @@
-(function ($) {
-  'use strict'; // Start of use strict
+(() => {
+  "use strict";
 
-  // Closes the sidebar menu
-  $('.menu-toggle').click(function (e) {
-    e.preventDefault();
-    $('#sidebar-wrapper').toggleClass('active');
-    $('.menu-toggle > .fa-bars, .menu-toggle > .fa-times').toggleClass(
-      'fa-bars fa-times'
+  const header = document.querySelector("[data-header]");
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const navigation = document.querySelector("[data-nav]");
+  const navLinks = navigation ? navigation.querySelectorAll("a") : [];
+  const year = document.querySelector("[data-year]");
+
+  const setHeaderState = () => {
+    if (header) header.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+
+  const closeMenu = () => {
+    if (!menuToggle || !navigation) return;
+    menuToggle.setAttribute("aria-expanded", "false");
+    navigation.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+  };
+
+  if (menuToggle && navigation) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      navigation.classList.toggle("is-open", !isOpen);
+      document.body.classList.toggle("menu-open", !isOpen);
+    });
+
+    navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
+  }
+
+  window.addEventListener("scroll", setHeaderState, { passive: true });
+  setHeaderState();
+
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  const revealItems = document.querySelectorAll("[data-reveal]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  } else {
+    const observer = new IntersectionObserver(
+      (entries, activeObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          activeObserver.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -8%", threshold: 0.12 },
     );
-    $(this).toggleClass('active');
-  });
 
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-    if (
-      location.pathname.replace(/^\//, '') ==
-        this.pathname.replace(/^\//, '') &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate(
-          {
-            scrollTop: target.offset().top,
-          },
-          1000,
-          'easeInOutExpo'
-        );
-        return false;
-      }
-    }
-  });
-
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('#sidebar-wrapper .js-scroll-trigger').click(function () {
-    $('#sidebar-wrapper').removeClass('active');
-    $('.menu-toggle').removeClass('active');
-    $('.menu-toggle > .fa-bars, .menu-toggle > .fa-times').toggleClass(
-      'fa-bars fa-times'
-    );
-  });
-
-  // Scroll to top button appear
-  $(document).scroll(function () {
-    var scrollDistance = $(this).scrollTop();
-    if (scrollDistance > 100) {
-      $('.scroll-to-top').fadeIn();
-    } else {
-      $('.scroll-to-top').fadeOut();
-    }
-  });
-})(jQuery); // End of use strict
+    revealItems.forEach((item) => observer.observe(item));
+  }
+})();
