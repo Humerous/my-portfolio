@@ -4,6 +4,12 @@ Personal portfolio website for David Miller, a Cape Town-based full-stack develo
 
 ## Live Site
 
+Current Git-backed production:
+
+https://my-portfolio-david-millers-projects-2889e321.vercel.app/
+
+Legacy alias still serving the older portfolio:
+
 https://my-portfolio-three-black.vercel.app/
 
 ## Current Version
