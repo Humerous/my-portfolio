@@ -1,76 +1,118 @@
-#My personal portfolio .
+# David Miller Portfolio
 
-- Deployed at - https://my-portfolio-three-black.vercel.app/
+Personal portfolio website for David Miller, a Cape Town-based full-stack developer and creative technologist.
 
-### Table of Contents
+## Live Site
 
-You're sections headers will be used to reference location of destination.
+https://my-portfolio-three-black.vercel.app/
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [References](#references)
-- [License](#license)
-- [Author Info](#author-info)
+## Current Version
 
-## Features
+This repository contains the current portfolio design restored from the verified Vercel deployment `HXxT4LB51HTCA5AgcUD439b2J4ZF`.
 
-- HTML
-- CSS
-- JS
-- BOOTSTRAP 4
+The site includes:
 
-## Requirements
+- Selected work
+- About
+- Capabilities
+- Contact
+- Responsive desktop and mobile layouts
+- Accessible navigation and interactions
 
-- internet 
-- computer or laptop
+## Technology
 
-## Installation
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
-- `01.\DOWNLOAD THE ZIP REPOSITORY`
-- `02.\_UNZIP`
-- `03.\_CD INTO PROJECT`
-- `04.\_RIGHT CLICK ON INDEX.HTML AND OPEN`
-- `05.\_VISIT - [https://www.videhttps://my-portfolio-three-black.vercel.app/)
+There is no package manager, framework dependency, database, or build step required for local development.
 
-## References
+## Project Structure
 
-Hyperion Development Bootcamp
+```text
+my-portfolio/
+├── index.html
+├── README.md
+└── assets/
+    ├── css/
+    │   └── styles.css
+    ├── js/
+    │   └── script.js
+    └── img/
+        └── website and project images
+```
 
-[Back To The Top](#read-me-template)
+## Run Locally
 
----
+From the project folder:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+Stop the server with `Control + C`.
+
+## Development Workflow
+
+```text
+LOCAL PROJECT
+→ TEST LOCALLY
+→ GIT COMMIT
+→ GITHUB main
+→ VERCEL
+→ PRODUCTION
+```
+
+Before pushing changes:
+
+```bash
+git status
+git diff
+```
+
+Commit and push approved changes:
+
+```bash
+git add .
+git commit -m "Describe the change"
+git push origin main
+```
+
+Vercel is connected to this repository and deploys updates from the production branch.
+
+## Recovery Record
+
+The current design was recovered from verified Vercel deployment:
+
+`HXxT4LB51HTCA5AgcUD439b2J4ZF`
+
+The recovered deployment source consisted of:
+
+- `index.html`
+- `assets/css/styles.css`
+- `assets/js/script.js`
+
+Existing repository image assets were retained because the current portfolio references them.
+
+A safety branch preserves the repository state from before recovery:
+
+`backup-pre-HXxT4-recovery-2026-08-09`
+
+## Repository
+
+https://github.com/Humerous/my-portfolio
+
+## Author
+
+David Miller  
+Cape Town, South Africa
 
 ## License
 
-MIT License
-
-Copyright (c) [2026][david k miller]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-[Back To The Top](#read-me-template)
-
----
-
-## Author Info
-
-- Twitter - [@DavidMillerster](https://twitter.com/DavidMillerster)
-
-[Back To The Top](#read-me-template)
+MIT
