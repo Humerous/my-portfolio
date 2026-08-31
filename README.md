@@ -1,5 +1,7 @@
 # David Miller Portfolio
 
+> **Status:** This repository is retained as the working base for the planned **Chameleon Unicode Studios** portfolio and client-services site. The current David Miller portfolio remains the live version until that rebuild is completed.
+
 Personal portfolio website for David Miller, a Cape Town-based full-stack developer and creative technologist.
 
 ## Live Site
